@@ -1,0 +1,38 @@
+Error 00054. 0x300010 (Thread 0x17FC):
+Resource leak: The memory block (0x1681394) was never freed
+
+The memory block (0x01681394) [size: 36 bytes] was allocated with SysGetMem
+Call Tree:
+   0x004601A3(=EarthSphere.exe:0x01:05F1A3) system.pas#2450
+   0x0040601A(=EarthSphere.exe:0x01:00501A) WinHelpViewer.pas#655
+   0x00469FD9(=EarthSphere.exe:0x01:068FD9)
+   0x0046A1AF(=EarthSphere.exe:0x01:0691AF)
+
+------------------------------------------
+Functions called:
+ fflush (4 times)
+ delete (11 times)
+ free (13 times)
+ fclose (2 times)
+ fopen (2 times)
+ memset (1 times)
+ new (11 times)
+ SysReallocMem (2 times)
+ SysFreeMem (352 times)
+ SysGetMem (353 times)
+ lstrlenA (1 times)
+ lstrcpynA (4 times)
+ calloc (1 times)
+ strlen (71 times)
+ realloc (1 times)
+ strdup (1 times)
+ malloc (12 times)
+ memcpy (4 times)
+Resource types used:
+ object (11 allocs, 11 max)
+ memory block (368 allocs, 258 max)
+ file stream (2 allocs, 1 max)
+ file handle (2 allocs, 1 max)
+Modules used:
+ 00400000 10/27/2010 16:26:10 C:\Leonid 7\WorkDirectory\Earth\EarthSphere.exe
+==========================================
